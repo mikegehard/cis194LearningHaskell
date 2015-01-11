@@ -13,5 +13,4 @@ toDigitsRev :: Integer -> [Integer]
 toDigitsRev n = reverse(toDigits n)
 
 doubleEveryOther :: [Integer] -> [Integer]
---doubleEveryOther list = reverse $ zipWith (*) (reverse list) (cycle [1,2])
 doubleEveryOther list = reverse $ zipWith (*) (reverse list) (cycle [1,2])
