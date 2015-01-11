@@ -34,3 +34,7 @@ spec = do
         it "doubles every other entry starting on the right" $ do
             doubleEveryOther [8,7,6,5] `shouldBe` [16,7,12,5]
             doubleEveryOther [1,2,3] `shouldBe` [1,4,3]
+
+    describe "sumDigits" $ do
+        it "sums all digits for a collection of numbers" $ do
+            sumDigits [16,7,12,5] `shouldBe` 22

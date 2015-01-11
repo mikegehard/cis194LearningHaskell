@@ -14,3 +14,6 @@ toDigitsRev n = reverse(toDigits n)
 
 doubleEveryOther :: [Integer] -> [Integer]
 doubleEveryOther list = reverse $ zipWith (*) (reverse list) (cycle [1,2])
+
+sumDigits :: [Integer] -> Integer
+sumDigits list = foldr (+) 0 (concatMap toDigits list)
