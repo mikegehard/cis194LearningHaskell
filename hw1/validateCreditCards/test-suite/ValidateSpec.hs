@@ -29,3 +29,8 @@ spec = do
     describe "toDigitsRev" $ do
         it "returns the list reversed" $ do
             toDigitsRev 12345 `shouldBe` [5,4,3,2,1]
+
+    describe "doubleEveryOther" $ do
+        it "doubles every other entry starting on the right" $ do
+            doubleEveryOther [8,7,6,5] `shouldBe` [16,7,12,5]
+            doubleEveryOther [1,2,3] `shouldBe` [1,4,3]
