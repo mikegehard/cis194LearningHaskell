@@ -8,8 +8,11 @@ import Test.QuickCheck
 spec :: Spec
 spec = do
     describe "validate" $ do
-        it "returns something" $ do
-            validate "me" `shouldBe` "Validate! me"
+        it "returns true for a valid number" $ do
+            validate 4012888888881881 `shouldBe` True
+
+        it "returns false for an invalid number" $ do
+            validate 4012888888881882 `shouldBe` False
 
     describe "toDigits" $ do
 --        it "returns empty list for 0" $ do

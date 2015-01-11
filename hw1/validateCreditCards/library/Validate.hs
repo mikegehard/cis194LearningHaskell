@@ -2,7 +2,8 @@ module Validate where
 
 import Data.Char (digitToInt)
 
-validate s = "Validate! " ++ s
+validate :: Integer -> Bool
+validate number = (sumDigits $ toDigits number) `mod` 10 > 0
 
 toDigits :: Integer -> [Integer]
 toDigits n
